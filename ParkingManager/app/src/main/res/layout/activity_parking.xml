@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.project.parkingmanager.Parking"
+    android:background="@drawable/backgroud2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/car_num_layout"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="Car Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_num_txt"
+                    android:textSize="20sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_scn_num"
+                    android:textSize="40sp"
+                    android:textAlignment="center"
+                    android:layout_below="@+id/car_num_txt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <Button
+                    android:text="Scan Again"
+                    android:layout_width="match_parent"
+                    android:id="@+id/scan_btn"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/car_scn_num"
+                    android:layout_weight="0.38"
+                    android:layout_height="wrap_content"
+                    android:background="#0097A7"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/phone_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Phone Number"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView14"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/phone_editText"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ticket_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Ticket Number"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView15"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/ticket_Text"
+                    android:layout_weight="1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lot_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Parking Lot"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView16"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lot_number"
+                    android:textSize="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/date_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="Start Date"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/start_date_txt"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/start_date_set_txt"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/time_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="Start Time"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/start_txt"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:id="@+id/start_time_set_txt" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:text="Park"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/park_btn"
+                android:layout_below="@id/time_layout"
+                android:layout_marginTop="10dp"
+                android:background="#0097A7"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
